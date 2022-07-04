@@ -30,20 +30,16 @@
                             <div class="n-featured-singel-meta">
                                 <h4><a href="listings/{{$listing['id']}}">{{$listing->title}}</a></h4>
 
-                                <p><i class="fa fa-map-marker"></i><a href="ad_location/usa/index.html"> {{$listing->location}}</a></p>
+                                <p><i class="fa fa-map-marker"></i><a href=""> {{$listing->location}}</a></p>
                                 <div class="n-cat">{{$listing->description}}</div>
 
                             </div>
 
                         </div>
                         <div class="n-featured-single-bottom">
-                            <ul class="">
-                                <li> <i class="fa fa-clock-o"></i>4 years ago</li>
-                                <li>
-                                    Dollar 2000-3000 / Monthly
-                                </li>
-                                <li> <i class="fa fa-hand-o-right"></i>Contract</li>
-                            </ul>
+                            <center>
+                                <span class="badge badge-info" style="font-size: 140%; padding: 5px; background-color: #17a2b8;">Tags: </span>  <x-listing-tags :tags="$listing->tags" />
+                            </center>
                         </div>
                     </div>
                 </div>

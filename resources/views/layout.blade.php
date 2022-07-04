@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel='stylesheet' id='bootstrap-theme-css'  href='{{asset('css/bootstrap.min7404.css?ver=5.9.3')}}' type='text/css' media='all' />
     <link rel='stylesheet' id='megamenu-css'  href='{{asset('css/mega_menu.min7404.css?ver=5.9.3')}}' type='text/css' media='all' />
     <link rel='stylesheet' id='font-awesome-css'  href='{{asset('css/font-awesome.min7404.css?ver=5.9.3')}}' type='text/css' media='all' />
