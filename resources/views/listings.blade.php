@@ -31,7 +31,7 @@
                                 <h4><a href="listings/{{$listing['id']}}">{{$listing->title}}</a></h4>
 
                                 <p><i class="fa fa-map-marker"></i><a href=""> {{$listing->location}}</a></p>
-                                <div class="n-cat">{{$listing->description}}</div>
+                                <div class="n-cat">{{substr($listing->description, 0, 135)}}...</div>
 
                             </div>
 
