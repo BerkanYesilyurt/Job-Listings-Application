@@ -23,7 +23,7 @@
                 <li><a href="" class="n-login-header"><i class="fa fa-sign-in"></i>Login</a></li>
                 <li><a href="" class="n-login-header"><i class="fa fa-user-plus"></i>Register</a></li>
                 <li>
-                    <a href="" class="btn n-btn-flat"><i class="fa fa-plus-square"></i>Job Post</a>
+                    <a href="/create" class="btn n-btn-flat"><i class="fa fa-plus-square"></i>Job Post</a>
                 </li>
             </ul>
 
@@ -41,5 +41,10 @@
 </div>
 </div>
 </div>
+
+
+@if(session('message'))
+    <script>alert('{{session('message')}}')</script>
+@endif
 </body>
 </html>
