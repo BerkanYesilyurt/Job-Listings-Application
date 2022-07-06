@@ -9,6 +9,8 @@ class Listing extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['title', 'company', 'location', 'website', 'email', 'description', 'tags'];
+
     public static function filterIt($request){
         $all = self::all();
         if(isset($request['search'])){
@@ -27,7 +29,7 @@ class Listing extends Model
 
     }
 
-    public static function find($id){
+    public static function findIt($id){
         $listings = self::all();
         foreach($listings as $listing){
             if($listing['id'] == $id){
