@@ -27,12 +27,12 @@
                                                                 <h3>Post a Job</h3>
                                                             </div>
                                                         </div>
-                                                        <form method="post" action="/create">
+                                                        <form method="post" action="/create" enctype="multipart/form-data">
                                                             @csrf
                                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                                 <div class="form-group">
                                                                     <label>Company Name:</label>
-                                                                    <input placeholder="Berkan LLC." class="form-control" type="text" name="company"/>
+                                                                    <input placeholder="Berkan LLC." class="form-control" type="text" name="company" value="{{old('company')}}"/>
                                                                     @error('company')
                                                                     <font color="red">{{$message}}</font>
                                                                     @enderror
@@ -41,7 +41,7 @@
                                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                                 <div class="form-group">
                                                                     <label>Job Title:</label>
-                                                                    <input placeholder="Example: Mid. PHP Developer" class="form-control" type="text" name="title"/>
+                                                                    <input placeholder="Example: Mid. PHP Developer" class="form-control" type="text" name="title" value="{{old('title')}}"/>
                                                                     @error('title')
                                                                     <font color="red">{{$message}}</font>
                                                                     @enderror
@@ -50,7 +50,7 @@
                                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                                 <div class="form-group">
                                                                     <label>Job Location:</label>
-                                                                    <input placeholder="Example: Istanbul,Turkey" class="form-control" type="text" name="location"/>
+                                                                    <input placeholder="Example: Istanbul,Turkey" class="form-control" type="text" name="location"  value="{{old('location')}}"/>
                                                                     @error('location')
                                                                     <font color="red">{{$message}}</font>
                                                                     @enderror
@@ -59,7 +59,7 @@
                                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                                 <div class="form-group">
                                                                     <label>E-mail:</label>
-                                                                    <input placeholder="Example: test@website.com" class="form-control" type="text" name="email"/>
+                                                                    <input placeholder="Example: test@website.com" class="form-control" type="text" name="email" value="{{old('email')}}"/>
                                                                     @error('email')
                                                                     <font color="red">{{$message}}</font>
                                                                     @enderror
@@ -68,7 +68,7 @@
                                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                                 <div class="form-group">
                                                                     <label>Website:</label>
-                                                                    <input placeholder="https://www.example.com" class="form-control" type="text" name="website"/>
+                                                                    <input placeholder="https://www.example.com" class="form-control" type="text" name="website" value="{{old('website')}}"/>
                                                                     @error('website')
                                                                     <font color="red">{{$message}}</font>
                                                                     @enderror
@@ -77,24 +77,26 @@
                                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                                 <div class="form-group">
                                                                     <label>Tags (comma separated):</label>
-                                                                    <input placeholder="Example: php, laravel, backend" class="form-control" type="text" name="tags"/>
+                                                                    <input placeholder="Example: php, laravel, backend" class="form-control" type="text" name="tags" value="{{old('tags')}}"/>
                                                                     @error('tags')
                                                                     <font color="red">{{$message}}</font>
                                                                     @enderror
                                                                 </div>
                                                             </div>
-                                                            <!--
+
                                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                                 <div class="form-group">
                                                                     <label>Company Logo:</label>
                                                                     <input class="form-control" type="file" name="logo"/>
+                                                                    @error('logo')
+                                                            <font color="red">{{$message}}</font>
+                                                                    @enderror
                                                                 </div>
                                                             </div>
-                                                            -->
                                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                                 <div class="form-group">
                                                                     <label>Job Description:</label>
-                                                                    <textarea class="form-control" placeholder="Requirements, Salary, Working Days and Hours. All other details about the job." name="description" rows="4" cols="50"></textarea>
+                                                                    <textarea class="form-control" placeholder="Requirements, Salary, Working Days and Hours. All other details about the job." name="description" rows="4" cols="50">{{old('description')}}</textarea>
                                                                     @error('description')
                                                                     <font color="red">{{$message}}</font>
                                                                     @enderror
