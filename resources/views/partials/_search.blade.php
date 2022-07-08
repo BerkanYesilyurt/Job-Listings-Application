@@ -7,7 +7,7 @@
                                 <div class="n-hero-two-box">
                                     <div class="n-hero-two-main-text">
                                         <h1>Your Dream Jobs is Waiting</h1>
-                                        <p>Subtitle</p>
+                                        <p>You can search millions of jobs online to find the next step in your career. With tools for job search, resumes, company reviews and more. Let's search!</p>
                                     </div>
                                     <div class="n-hero-two-form-cat">
                                         <div class="n-saech-two-form">
