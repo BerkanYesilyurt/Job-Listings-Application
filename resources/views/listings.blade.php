@@ -16,16 +16,16 @@
 
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="row">
-            <div class="n-features-job-two-box clear-custom">
+            <div class="n-features-job-two-box clear-custom" style="width: 100%;">
 @foreach($listings as $listing)
 
 
 
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="height: 300px; float:left;">
                     <div class="n-featured-single">
                         <div class="n-featured-single-top">
                             <div class="n-featured-singel-img">
-                                <a href="job/ios-engineer-backup/index.html"><img src="wp-content/uploads/sites/3/2018/09/images-8-150x150.png" class="img-responsive" alt="logo"></a>
+                                <a href="listings/{{$listing['id']}}"><img src="{{$listing->logo ? asset(('storage/' . $listing['logo'])) : asset(('img/nologo.jpg'))}}" class="img-responsive" alt="logo"></a>
                             </div>
                             <div class="n-featured-singel-meta">
                                 <h4><a href="listings/{{$listing['id']}}">{{$listing->title}}</a></h4>

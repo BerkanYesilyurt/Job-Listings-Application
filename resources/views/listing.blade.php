@@ -9,14 +9,14 @@
 
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="row">
-            <div class="n-features-job-two-box clear-custom">
+            <div class="n-features-job-two-box clear-custom" style="width: 100%">
                 @include('partials._onlysearch')
 
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="width: 100%">
                     <div class="n-featured-single" style="padding: 50px;  border: 5px solid rgb(251, 35, 106);" >
                         <div class="n-featured-single-top">
                             <center>
-                                <a href=""><img src="https://getbootstrap.com/docs/4.4/assets/img/favicons/apple-touch-icon.png" class="img-responsive" alt="logo"></a>
+                                <a href="{{$listing->logo ? asset(('storage/' . $listing['logo'])) : asset(('img/nologo.jpg'))}}"><img src="{{$listing->logo ? asset(('storage/' . $listing['logo'])) : asset(('img/nologo.jpg'))}}" class="img-responsive" alt="logo"></a>
 
                             <div class="n-featured-singel-meta">
                                 <h2><a href="listings/{{$listing['id']}}">{{$listing->title}}</a> <br>{{$listing->company}}</h2>
@@ -36,7 +36,17 @@
                         <a href ="mailto:{{$listing->email}}" class="btn n-btn-rounded">Contact</a>
 
                         <a href ="{{$listing->website}}" class="btn n-btn-rounded">Visit Website</a>
+                        <br><hr><br>
+
+                            <form method="POST" action="/listings/{{$listing->id}}">
+
+                                <a href ="/listings/{{$listing->id}}/edit" class="btn n-btn-rounded">Update</a>
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn n-btn-rounded">Delete</button>
+                            </form>
                         </center>
                     </div>
+
                 </div>
 @endsection
