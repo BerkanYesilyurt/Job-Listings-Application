@@ -20,8 +20,14 @@
                 </li>
             </ul>
             <ul class="menu-button">
-                <li><a href="" class="n-login-header"><i class="fa fa-sign-in"></i>Login</a></li>
-                <li><a href="" class="n-login-header"><i class="fa fa-user-plus"></i>Register</a></li>
+                @auth
+                    <li class="n-login-header"><b>WELCOME {{auth()->user()->name}}</b></li>
+                <li><a href="/manage" class="n-login-header"><i class="fa fa-cogs"></i>Manage Listings</a></li>
+                    <li><a href="/logout" class="n-login-header"><i class="fa fa-sign-out"></i>Logout</a></li>
+                @else
+                <li><a href="/login" class="n-login-header"><i class="fa fa-sign-in"></i>Login</a></li>
+                <li><a href="/register" class="n-login-header"><i class="fa fa-user-plus"></i>Register</a></li>
+                @endauth
                 <li>
                     <a href="/create" class="btn n-btn-flat"><i class="fa fa-plus-square"></i>Job Post</a>
                 </li>
