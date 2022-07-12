@@ -36,6 +36,8 @@
                         <a href ="mailto:{{$listing->email}}" class="btn n-btn-rounded">Contact</a>
 
                         <a href ="{{$listing->website}}" class="btn n-btn-rounded">Visit Website</a>
+
+                            @auth
                         <br><hr><br>
 
                             <form method="POST" action="/listings/{{$listing->id}}">
@@ -45,6 +47,7 @@
                                 @method('DELETE')
                                 <button type="submit" class="btn n-btn-rounded">Delete</button>
                             </form>
+                            @endauth
                         </center>
                     </div>
 
