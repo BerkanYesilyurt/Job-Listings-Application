@@ -7,7 +7,7 @@
                             <div class="row">
                                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2">
                                     <div class="n-breadcrumb-info">
-                                        <h1>Job Listing</h1><p>Edit {{$listing->title}}</p>
+                                        <h1>Job Listing</h1><p>Edit > {{$listing->title}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -24,7 +24,7 @@
                                                     <div class="n-page-left-side">
                                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                             <div class="post-job-heading">
-                                                                <h3>Post a Job</h3>
+                                                                <h3>Edit > {{$listing->title}}</h3>
                                                             </div>
                                                         </div>
                                                         <form method="post" action="/listings/{{$listing->id}}" enctype="multipart/form-data">
