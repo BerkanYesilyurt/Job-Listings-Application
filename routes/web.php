@@ -6,26 +6,38 @@ use App\Models\Listing;
 use Illuminate\Support\Facades\Route;
 
 /*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
+ * Job-Listings-Application
+ * Author: Berkan Yeşilyurt (https://github.com/BerkanYesilyurt)
+ * Repository: https://github.com/BerkanYesilyurt/Job-Listings-Application
 */
 
+//HomePage
 Route::get('/', [ListingController::class, 'index']);
+
+//New Listing
 Route::get('create', [ListingController::class, 'create'])->middleware('auth');
 Route::post('create', [ListingController::class, 'store'])->middleware('auth');
 Route::get('listings/{listing}', [ListingController::class, 'show']);
+
+//Edit Listing
 Route::get('listings/{listing}/edit', [ListingController::class, 'edit'])->middleware('auth');
+
+//Show Listings
 Route::put('listings/{listing}', [ListingController::class, 'update'])->middleware('auth');
+
+//Delete Listing
 Route::delete('listings/{listing}', [ListingController::class, 'destroy'])->middleware('auth');
+
+//Register
 Route::get('register', [UserController::class, 'create'])->middleware('guest');
 Route::post('register', [UserController::class, 'store']);
+
+//Logout
 Route::get('logout', [UserController::class, 'logout'])->middleware('auth');
+
+//Login
 Route::get('login', [UserController::class, 'login'])->name('login')->middleware('guest');
 Route::post('login', [UserController::class, 'loginNow']);
+
+//Manage Listings
 Route::get('manage', [ListingController::class, 'manage'])->middleware('auth');
