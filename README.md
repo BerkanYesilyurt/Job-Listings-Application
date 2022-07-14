@@ -6,6 +6,7 @@ Job Listings Application is a web application based on Laravel & PHP. This syste
 - Single listing pages with all details displayed
 - Listing postings by tags
 - Listing postings by title,description and tags (general search)
+- Add New Listing
 - Manage Listings (update, delete)
 - Membership (register/login/logout)
 - Validation of all form fields
@@ -20,15 +21,20 @@ Job Listings Application is a web application based on Laravel & PHP. This syste
 - Login/Register Page
 - Logout
 
+
 ## Installation
 > Make sure you've installed Composer
 - Open the folder with any editor
 - Open ` .env ` and put your database details into it
 - Write these lines to editor's terminal or default terminal of your system (make sure you're inside of the folder)  
 
-   ` "php artisan migrate" ` then ` "php artisan db:seed" ` then ` "php artisan storage:link" ` then ` "php artisan serve" `
+     1.   ` "php artisan migrate" `
+     2.   ` "php artisan db:seed" `
+     3.   ` "php artisan storage:link" `
+     4.   ` "php artisan serve" `
 
 - That's it, you're ready to use it.
+
 
 ## Screenshots
 **Click on the pictures for the original resolution.**
