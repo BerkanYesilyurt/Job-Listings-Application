@@ -1,3 +1,7 @@
+<p align="center"> 
+<img src="https://user-images.githubusercontent.com/8729215/179297577-2a25b2e6-c3c7-4a4a-b43b-9a5c77b19190.png">
+</p>
+
 # Job Listings Application
 Job Listings Application is a web application based on Laravel & PHP. This system lists job postings. Visitors can view these postings, examine them one by one, and make detailed searches within the postings. Registered users can edit, delete or post new job postings.
 
