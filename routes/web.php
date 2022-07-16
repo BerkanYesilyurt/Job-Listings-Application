@@ -17,12 +17,14 @@ Route::get('/', [ListingController::class, 'index']);
 //New Listing
 Route::get('create', [ListingController::class, 'create'])->middleware('auth');
 Route::post('create', [ListingController::class, 'store'])->middleware('auth');
+
+//Show Single Listing
 Route::get('listings/{listing}', [ListingController::class, 'show']);
 
 //Edit Listing
 Route::get('listings/{listing}/edit', [ListingController::class, 'edit'])->middleware('auth');
 
-//Show Listings
+//Update Listing
 Route::put('listings/{listing}', [ListingController::class, 'update'])->middleware('auth');
 
 //Delete Listing
