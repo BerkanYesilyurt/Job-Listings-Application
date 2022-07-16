@@ -9,7 +9,7 @@ class Listing extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'logo', 'company', 'location', 'website', 'email', 'description', 'tags'];
+    protected $fillable = ['user_id', 'title', 'logo', 'company', 'location', 'website', 'email', 'description', 'tags'];
 
     public static function filterIt($request){
         $all = self::all();
@@ -24,7 +24,7 @@ class Listing extends Model
             return self::query()->where('tags', 'LIKE', '%' . request('tag') . '%')->get();
         }
         else{
-            return $all;
+            return self::orderBy('id', 'DESC')->get();
         }
 
     }
