@@ -43,7 +43,9 @@ class ListingController extends Controller
         $fields['logo'] = $request->file('logo')->store('logos', 'public');;
 
     }
-
+    
+    $fields['user_id'] = auth()->id();
+        
     Listing::create($fields);
 
     return redirect('/')->with('message', 'Listing created successfully.');
@@ -85,7 +87,7 @@ class ListingController extends Controller
 
     public function manage(){
         return view('manage', [
-            'listings' => Listing::all()
+            'listings' => Listing::all()->where('user_id','=', auth()->id())
         ]);
     }
 
