@@ -16,7 +16,7 @@
                     <div class="n-featured-single" style="padding: 50px;  border: 5px solid rgb(251, 35, 106);" >
                         <div class="n-featured-single-top">
                             <center>
-                                <a href="{{$listing->logo ? asset(('storage/' . $listing['logo'])) : asset(('img/nologo.jpg'))}}"><img src="{{$listing->logo ? asset(('storage/' . $listing['logo'])) : asset(('img/nologo.jpg'))}}" class="img-responsive" alt="logo"></a>
+                                <a href="{{$listing->logo ? asset(('storage/' . $listing['logo'])) : asset(('img/nologo.jpg'))}}"><img style="max-width: 50%; height: auto;" src="{{$listing->logo ? asset(('storage/' . $listing['logo'])) : asset(('img/nologo.jpg'))}}" class="img-responsive" alt="logo"></a>
 
                             <div class="n-featured-singel-meta">
                                 <h2><a href="listings/{{$listing['id']}}">{{$listing->title}}</a> <br>{{$listing->company}}</h2>
