@@ -5,6 +5,10 @@
 # Job Listings Application
 Job Listings Application is a web application based on Laravel & PHP. This system lists job postings. Visitors can view these postings, examine them one by one, and make detailed searches within the postings. Registered users can edit, delete or post new job postings.
 
+## Default Account / Test Account
+- E-mail: test@test.com
+- Password: 123
+
 ## Features
 - All postings are listed on the homepage
 - Single listing pages with all details displayed
